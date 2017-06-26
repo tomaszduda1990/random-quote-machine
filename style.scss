@@ -1,0 +1,279 @@
+@keyframes writing{
+	0% {width: 100%;}
+	100%{width: 0;}
+}
+@keyframes coursor{
+	
+  0% { border-left-color:transparent; }
+  50% { border-left-color:black; }
+  100% { border-left-color:transparent; }
+
+}
+@keyframes loading-quote {
+   0%, 40%, 100% { 
+   transform: translateY(-10px);
+   -webkit-transform: translateY(-10px);
+      } 20% {
+   transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);
+      }
+    }
+
+
+body{
+	margin: 0;
+	background-image: url('michal-grosicki-216658.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#header {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	transition: 2s;
+	background: rgba(230, 138, 0, 1);
+	border-bottom: 2px solid #d9d9d9;
+	z-index: 99;
+	header{
+	display: inline-block;
+	
+	#write{
+	position: relative;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Cutive Mono', monospace;
+	font-weight: 700;
+	color: #d9d9d9;
+	margin: 0;	
+	span{
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		background-color: rgb(230, 138, 0);
+		border-left:1px solid transparent;
+		animation: writing 3.5s steps(20), coursor 0.7s step-end infinite;
+
+	}
+}
+
+}
+
+}
+.quote-container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	#box {
+	top: 200px;
+	left: 50%;
+	padding: 20px;
+	transform: translateX(-50%);		
+	width: 600px;
+	height: 350px;
+	background: rgba(200, 54, 54, 0.7);
+	position: relative;
+	border-radius: 5%;
+	#loader{
+	  position: absolute;
+	  display: none;
+	  top: 50%;
+	  left: 0;
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      div {
+		background-color: #d9d9d9;
+		height: 10px;
+		width: 10px;
+		border-radius: 50%;
+		display: inline-block;
+        -webkit-animation: loading-quote 0.7s infinite ease-in-out;
+        animation: loading-quote 0.7s infinite ease-in-out;
+    }
+     .circ2 {
+      -webkit-animation-delay: -0.6s;
+      animation-delay: -0.6s;	
+    }
+
+    .circ3 {
+      -webkit-animation-delay: -0.5s;
+      animation-delay: -0.5s;
+    }
+    }
+   
+	#quote{
+		text-align: center;
+		vertical-align: center;
+		font-size: 30px;
+		font-family: "Indie Flower", cursive;
+		font-weight: 700;
+		color: #d9d9d9;
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	footer{
+		text-align: right;
+		a{
+		display: none;
+		text-decoration: none;
+		margin: 0;
+		padding: 0;
+		div{
+			background-color: #00aced; 
+			padding: 5px;
+			border-radius: 10%;
+			i{
+				font-size: 20px;
+				color: white;
+			}
+	}
+	}
+		#author{
+			margin: 0 0 5px 0;
+			font-size: 17px;
+			color: #d9d9d9;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 700;
+		}
+	}
+
+}
+.btn {
+  z-index: 10;
+  position: relative;
+  bottom: -175px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 50px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid #996600;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  &:focus {
+    color: #fff;
+    outline: 0;
+  }
+
+}
+.btn-quote {
+  border-color: #996600;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #996600 inset, 0 0 0 0 #993333;
+  transition: all 150ms ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 0 10px 0 #993333 inset, 0 0 10px 4px #993333;
+  }
+}
+}
+
+@media screen and (max-width: 750px) and (min-width: 551px){
+	.quote-container{
+		#box{
+			width: 400px;
+			height: 310px;
+			#quote{
+				font-size: 25px;
+			}
+			footer{
+				#author{
+					font-size: 15px;
+				}
+			}
+				
+		}
+		.btn{
+			width: 150px;
+			
+		}
+
+	}
+}
+@media screen and (max-width: 550px) and (min-width: 451px){
+	#header{
+		header{
+			#write{
+				font-size: 30px;
+			}
+		}
+	}
+	.quote-container{
+		#box{
+			width: 300px;
+			height: 250px;
+			#quote{
+					font-size: 22px;
+				}
+			footer{
+				#author{
+					font-size: 15px;
+				}	
+			}
+			
+		}
+		.btn{
+			width: 100px;
+			
+			font-size: 14px;
+			letter-spacing: 0;
+		}
+
+	}
+
+}
+
+
+@media screen and (max-width: 450px){
+	#header{
+		header{
+			#write{
+				font-size: 24px;
+			}
+		}
+	}
+	.quote-container{
+		#box{
+			width: 250px;
+			height: 200px;
+			transform: translateX(-50%);
+			footer{
+				#author{
+					font-size: 12px;
+				}	
+			}
+			#quote{
+				font-size: 17px;
+			}
+			
+		}
+		.btn{
+			width: 100px;
+			transform: translateX(-50%);
+			font-size: 14px;
+			letter-spacing: 0;
+			height: 40px;
+			bottom: -180px;
+		}
+
+	}
+
+}
