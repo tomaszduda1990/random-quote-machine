@@ -12,10 +12,59 @@
     border-left-color: transparent; } }
 @keyframes loading-quote {
   0%, 40%, 100% {
-    transform: translateY(-10px);
+    transform: translateY(-10px); }
+  20% {
+    transform: translateY(-20px); } }
+@-moz-keyframes writing {
+  0% {
+    width: 100%; }
+  100% {
+    width: 0; } }
+@-moz-keyframes coursor {
+  0% {
+    border-left-color: transparent; }
+  50% {
+    border-left-color: black; }
+  100% {
+    border-left-color: transparent; } }
+@-moz-keyframes loading-quote {
+  0%, 40%, 100% {
+    -moz-transform: translateY(-10px); }
+  20% {
+    -moz-transform: translateY(-20px); } }
+@-o-keyframes writing {
+  0% {
+    width: 100%; }
+  100% {
+    width: 0; } }
+@-o-keyframes coursor {
+  0% {
+    border-left-color: transparent; }
+  50% {
+    border-left-color: black; }
+  100% {
+    border-left-color: transparent; } }
+@-o-keyframes loading-quote {
+  0%, 40%, 100% {
+    -o-transform: translateY(-10px); }
+  20% {
+    -o-transform: translateY(-20px); } }
+@-webkit-keyframes writing {
+  0% {
+    width: 100%; }
+  100% {
+    width: 0; } }
+@-webkit-keyframes coursor {
+  0% {
+    border-left-color: transparent; }
+  50% {
+    border-left-color: black; }
+  100% {
+    border-left-color: transparent; } }
+@-webkit-keyframes loading-quote {
+  0%, 40%, 100% {
     -webkit-transform: translateY(-10px); }
   20% {
-    transform: translateY(-20px);
     -webkit-transform: translateY(-20px); } }
 body {
   margin: 0;
@@ -36,6 +85,7 @@ body {
   height: 100%;
   width: 100%;
   transition: 2s;
+  -webkit-transition: 2s;
   background: #e68a00;
   border-bottom: 2px solid #d9d9d9;
   z-index: 99; }
@@ -67,6 +117,9 @@ body {
     left: 50%;
     padding: 20px;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
     width: 600px;
     height: 350px;
     background: rgba(200, 54, 54, 0.7);
@@ -129,6 +182,9 @@ body {
     bottom: -175px;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
     width: 220px;
     height: 50px;
     box-sizing: border-box;
@@ -150,9 +206,16 @@ body {
     border-color: #996600;
     color: #fff;
     box-shadow: 0 0 40px 40px #996600 inset, 0 0 0 0 #993333;
-    transition: all 150ms ease-in-out; }
+    -moz-box-shadow: 0 0 40px 40px #996600 inset, 0 0 0 0 #993333;
+    -webkit-box-shadow: 0 0 40px 40px #996600 inset, 0 0 0 0 #993333;
+    transition: all 150ms ease-in-out;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out; }
     .quote-container .btn-quote:hover {
-      box-shadow: 0 0 10px 0 #993333 inset, 0 0 10px 4px #993333; }
+      box-shadow: 0 0 10px 0 #993333 inset, 0 0 10px 4px #993333;
+      -moz-box-shadow: 0 0 10px 0 #993333 inset, 0 0 10px 4px #993333;
+      -webkit-box-shadow: 0 0 10px 0 #993333 inset, 0 0 10px 4px #993333; }
 
 @media screen and (max-width: 750px) and (min-width: 551px) {
   .quote-container #box {
@@ -185,15 +248,13 @@ body {
 
   .quote-container #box {
     width: 250px;
-    height: 200px;
-    transform: translateX(-50%); }
+    height: 200px; }
     .quote-container #box footer #author {
       font-size: 12px; }
     .quote-container #box #quote {
       font-size: 17px; }
   .quote-container .btn {
     width: 100px;
-    transform: translateX(-50%);
     font-size: 14px;
     letter-spacing: 0;
     height: 40px;
