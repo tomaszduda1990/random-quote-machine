@@ -176,7 +176,7 @@ body {
         color: #d9d9d9;
         font-family: 'Open Sans', sans-serif;
         font-weight: 700; }
-  .quote-container .btn {
+  .quote-container #quote-button {
     z-index: 10;
     position: relative;
     bottom: -175px;
@@ -198,11 +198,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
-    letter-spacing: 2px; }
-    .quote-container .btn:focus {
-      color: #fff;
-      outline: 0; }
-  .quote-container .btn-quote {
+    letter-spacing: 2px;
     border-color: #996600;
     color: #fff;
     box-shadow: 0 0 40px 40px #996600 inset, 0 0 0 0 #993333;
@@ -212,7 +208,10 @@ body {
     -webkit-transition: all 150ms ease-in-out;
     -moz-transition: all 150ms ease-in-out;
     -o-transition: all 150ms ease-in-out; }
-    .quote-container .btn-quote:hover {
+    .quote-container #quote-button:focus {
+      color: #fff;
+      outline: 0; }
+    .quote-container #quote-button:hover {
       box-shadow: 0 0 10px 0 #993333 inset, 0 0 10px 4px #993333;
       -moz-box-shadow: 0 0 10px 0 #993333 inset, 0 0 10px 4px #993333;
       -webkit-box-shadow: 0 0 10px 0 #993333 inset, 0 0 10px 4px #993333; }
@@ -225,7 +224,7 @@ body {
       font-size: 25px; }
     .quote-container #box footer #author {
       font-size: 15px; }
-  .quote-container .btn {
+  .quote-container #quote-button {
     width: 150px; } }
 @media screen and (max-width: 550px) and (min-width: 451px) {
   #header header #write {
@@ -238,7 +237,7 @@ body {
       font-size: 22px; }
     .quote-container #box footer #author {
       font-size: 15px; }
-  .quote-container .btn {
+  .quote-container #quote-button {
     width: 100px;
     font-size: 14px;
     letter-spacing: 0; } }
@@ -253,7 +252,7 @@ body {
       font-size: 12px; }
     .quote-container #box #quote {
       font-size: 17px; }
-  .quote-container .btn {
+  .quote-container #quote-button {
     width: 100px;
     font-size: 14px;
     letter-spacing: 0;
