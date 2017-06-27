@@ -4,7 +4,7 @@ var author = document.getElementById('author');
 var header = document.getElementById('header');
 var load  = document.getElementById('loader');
 var tweetButton = document.getElementById('twitter-share-button');
-var myStyle = "height:100px;background-color:rgba(230, 138, 0, 0.7);position:absolute;";
+var myStyle = "height:100px;background-color:rgba(230, 138, 0, 0.7);position:absolute;transition: 2s;-webkit-transition: 2s;";
 
 function postOnTwitter(quote, author){
 	var attr = "https://twitter.com/intent/tweet?text=";
