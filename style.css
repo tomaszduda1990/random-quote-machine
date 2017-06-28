@@ -76,7 +76,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100%; }
+  min-height: 100%;
+  overflow: hidden; }
 
 .clearfix {
   clear: both; }
@@ -188,7 +189,7 @@ body {
     width: 220px;
     height: 50px;
     box-sizing: border-box;
-    background-color: transparent;
+    background-color: #660000;
     border: 2px solid #996600;
     border-radius: 10px;
     cursor: pointer;
@@ -214,7 +215,8 @@ body {
     .quote-container #quote-button:hover {
       box-shadow: 0 0 10px 0 #993333 inset, 0 0 10px 4px #993333;
       -moz-box-shadow: 0 0 10px 0 #993333 inset, 0 0 10px 4px #993333;
-      -webkit-box-shadow: 0 0 10px 0 #993333 inset, 0 0 10px 4px #993333; }
+      -webkit-box-shadow: 0 0 10px 0 #993333 inset, 0 0 10px 4px #993333;
+      border: #660000; }
 
 @media screen and (max-width: 750px) and (min-width: 551px) {
   .quote-container #box {

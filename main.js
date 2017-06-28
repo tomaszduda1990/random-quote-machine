@@ -20,7 +20,7 @@ btn.addEventListener("click", function(){
 	
 
 	var ourRequest = new XMLHttpRequest();
-	ourRequest.open('GET', 'https://random-quote-generator.herokuapp.com/api/quotes/', );
+	ourRequest.open('GET', 'https://random-quote-generator.herokuapp.com/api/quotes/');
 	ourRequest.onload = function(){
 		var rand = Math.floor((Math.random() * 81));
 		var ourData = JSON.parse(ourRequest.responseText);
